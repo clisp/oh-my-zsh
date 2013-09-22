@@ -39,7 +39,10 @@ MAKE_TEMPLATE_DIR=${MY_LOCAL_DIR}/make_template
 export MAKE_TEMPLATE_DIR
 
 # source helper functions
-source ${MY_LOCAL_DIR}/bin/helper_functions.sh
+func_file=${MY_LOCAL_DIR}/bin/helper_functions.sh
+if [[ -f "${func_file}" ]]; then
+   source "${func_file}"
+fi
 
 # set environment variable EDITOR for crontab and mercurial
 EDITOR=vim
