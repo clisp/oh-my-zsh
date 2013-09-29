@@ -4,8 +4,8 @@
 
 
 #
-PROMPT=$'┌[%n] [%{$fg_bold[green]%}%D{%m-%d %H:%M:%S}%{$reset_color%}] [%{$fg[cyan]%}%~%{$reset_color%}] $(git_prompt_info)$(hg_prompt_info)
-└[%{$fg[yellow]%}%h%{$reset_color%}] [%{$fg[red]%}%(!.#.$)%{$reset_color%}] '
+PROMPT=$'┌[%{$fg_bold[green]%}%D{%m-%d %H:%M:%S}%{$reset_color%}] [%n] [%{$fg[cyan]%}%~%{$reset_color%}] [%{$fg[yellow]%}%h%{$reset_color%}]
+└[%{$fg[red]%}%(!.#.$)%{$reset_color%}] '
 
 PS2=$' [%{$fg[red]%}|%{$reset_color%}]> '
 

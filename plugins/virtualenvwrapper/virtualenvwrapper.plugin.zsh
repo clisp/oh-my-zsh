@@ -1,4 +1,5 @@
-virtualenvwrapper='virtualenvwrapper_lazy.sh'
+script_dir='/usr/share/doc/virtualenvwrapper/examples'
+virtualenvwrapper=${script_dir}/'virtualenvwrapper_lazy.sh'
 if (( $+commands[$virtualenvwrapper] )); then
   source ${${virtualenvwrapper}:c}
 
