@@ -64,10 +64,10 @@ export LC_ALL
 TMPDIR=/tmp
 
 # add module path for python
-if [ -z PYTHONPATH ]; then
-    export PYTHONPATH=${HOME}/local/py_module
+if [ -z "$PYTHONPATH" ]; then
+    export PYTHONPATH=${HOME}/local/lib/python2.7/site-packages/
 else
-    export PYTHONPATH=${HOME}/local/py_module:$PYTHONPATH
+    export PYTHONPATH=${HOME}/local/lib/python2.7/site-packages/:$PYTHONPATH
 fi
 
 # set environment for TIJ4
@@ -78,3 +78,10 @@ CLASSPATH=$CLASSPATH:$TIJ4_SRC_HOME
 ## python startup script
 export PYTHONSTARTUP=~/.pythonstartup
 
+# mac specified stuff
+os_type=$(uname -s)
+if [ "${os_type}" = 'Darwin' ]; then
+    # use coreutils tools instead of the mac default freebsd one
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+fi
