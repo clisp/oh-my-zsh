@@ -24,8 +24,8 @@ CPLUS_INCLUDE_PATH=${C_INCLUDE_PATH}
 export CPLUS_INCLUDE_PATH
 
 # append include path for apue/unp header
-APUE_ROOT=~/program/linux/apue/src
-#UNP_ROOT=~/program/unp
+APUE_ROOT=~/pro/linux/apue/src
+#UNP_ROOT=~/pro/unp
 C_INCLUDE_PATH=${C_INCLUDE_PATH}:${APUE_ROOT}/include
 #\:${UNP_ROOT}/include
 CPLUS_INCLUDE_PATH=${C_INCLUDE_PATH}
@@ -71,7 +71,7 @@ else
 fi
 
 # set environment for TIJ4
-TIJ4_SRC_HOME=~/program/java/tij4/TIJ4-code/
+TIJ4_SRC_HOME=~/prog/java/tij4/TIJ4-code/
 CLASSPATH=$CLASSPATH:$TIJ4_SRC_HOME
 
 
