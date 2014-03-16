@@ -83,5 +83,17 @@ os_type=$(uname -s)
 if [ "${os_type}" = 'Darwin' ]; then
     # use coreutils tools instead of the mac default freebsd one
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+    # use gnu sed
+    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+    # use gnu tar
+    export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+    if [ -z $MANPATH ]; then
+        export MANPATH="/usr/local/opt/coreutils/libexec/gnuman"
+    else
+        export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+    fi
+    export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+
+    # use homebrew-installed gnu command tools instead of the mac bsd ones
+    export PATH="/usr/local/bin:$PATH"
 fi
