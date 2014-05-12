@@ -12,7 +12,7 @@ then
     # otherwise, leave ls as is, because NetBSD's ls doesn't support -G
     gls --color -d . &>/dev/null 2>&1 && alias ls='gls --color=tty'
   else
-    ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G'
+    ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G --color=auto'
   fi
 fi
 

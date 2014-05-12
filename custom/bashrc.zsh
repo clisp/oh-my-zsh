@@ -87,6 +87,8 @@ if [ "${os_type}" = 'Darwin' ]; then
     export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
     # use gnu tar
     export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+    # use go
+    export PATH="$PATH:/usr/local/Cellar/go/1.2.1/libexec/bin"
     if [ -z $MANPATH ]; then
         export MANPATH="/usr/local/opt/coreutils/libexec/gnuman"
     else
