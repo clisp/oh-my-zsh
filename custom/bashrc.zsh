@@ -49,6 +49,7 @@ export EDITOR
 # alias settings
 alias em='env LC_CTYPE=zh_CN.utf8 emacs -nw --debug-init'
 alias ipy='ipython'
+alias joxa="rlwrap joxa"
 
 # set language
 LANGUAGE=en_US:en:zh_CN:zh
@@ -88,7 +89,7 @@ if [ "${os_type}" = 'Darwin' ]; then
     # use gnu tar
     export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
     # use go
-    export PATH="$PATH:/usr/local/Cellar/go/1.2.1/libexec/bin"
+    export PATH="$PATH:/usr/local/Cellar/go/1.2.2/libexec/bin"
     if [ -z $MANPATH ]; then
         export MANPATH="/usr/local/opt/coreutils/libexec/gnuman"
     else
