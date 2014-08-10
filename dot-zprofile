@@ -2,3 +2,13 @@
 # load rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# go env
+#export GOROOT=$(go env GOROOT)
+# or this
+# GOVERSION=$(brew list go | head -n 1 | cur -d '/' -f 6)
+# export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION/libexec
+# or this
+# export GOROOT=/usr/local/opt/go/libexec
+#launchctl setenv GOROOT $GOROOT
+

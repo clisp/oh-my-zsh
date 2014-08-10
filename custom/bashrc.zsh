@@ -88,8 +88,6 @@ if [ "${os_type}" = 'Darwin' ]; then
     export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
     # use gnu tar
     export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-    # use go
-    export PATH="$PATH:/usr/local/Cellar/go/1.2.2/libexec/bin"
     if [ -z $MANPATH ]; then
         export MANPATH="/usr/local/opt/coreutils/libexec/gnuman"
     else
@@ -100,3 +98,7 @@ if [ "${os_type}" = 'Darwin' ]; then
     # use homebrew-installed gnu command tools instead of the mac bsd ones
     export PATH="/usr/local/bin:$PATH"
 fi
+
+### alias
+alias joxa="rlwrap joxa"
+
