@@ -47,7 +47,8 @@ EDITOR=vim
 export EDITOR
 
 # alias settings
-alias em='env LC_CTYPE=zh_CN.utf8 emacs -nw --debug-init'
+#alias em='env LC_CTYPE=zh_CN.utf8 emacs -nw --debug-init'
+alias em='env LC_CTYPE=zh_CN.utf8 emacsclient -nw -a "" -s "$HOME/.emacs.d/server/server"'
 alias ipy='ipython'
 alias joxa="rlwrap joxa"
 
