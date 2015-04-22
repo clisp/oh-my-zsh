@@ -78,3 +78,24 @@ CLASSPATH=$CLASSPATH:$TIJ4_SRC_HOME
 ## python startup script
 export PYTHONSTARTUP=~/.pythonstartup
 
+# hg
+export HGEDITOR='vim'
+
+# svn
+alias svnwhat="svn st | grep -v -e '^?'"
+alias svnview='svn diff | less'
+export SVN_EDITOR='vim'
+
+if [ "$(uname -s)" = "Linux" ]; then
+   # sun java
+   export JAVA_HOME=/usr/lib/jvm/jdk-7-oracle-x64/
+   export PATH=$PATH:$JAVA_HOME/bin
+   export CLASSPATH=$JAVA_HOME/lib/:$JAVA_HOME/jre/lib/
+
+   # go
+   export GOROOT=$HOME/local/opt/go
+   export PATH=$GOROOT/bin:$PATH
+
+   # texlive
+   export PATH=$HOME/local/opt/texlive/bin/x86_64-linux:$PATH
+fi

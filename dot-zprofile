@@ -3,3 +3,9 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# load virtualenvwrapper
+virtualenv_wrapper_file="/etc/bash_completion.d/virtualenvwrapper"
+if [ -e ${virtualenvwrapper} ]; then
+  source ${virtualenv_wrapper_file}
+fi
+
