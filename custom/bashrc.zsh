@@ -24,8 +24,8 @@ CPLUS_INCLUDE_PATH=${C_INCLUDE_PATH}
 export CPLUS_INCLUDE_PATH
 
 # append include path for apue/unp header
-APUE_ROOT=~/program/linux/apue/src
-#UNP_ROOT=~/program/unp
+APUE_ROOT=~/pro/linux/apue/src
+#UNP_ROOT=~/pro/unp
 C_INCLUDE_PATH=${C_INCLUDE_PATH}:${APUE_ROOT}/include
 #\:${UNP_ROOT}/include
 CPLUS_INCLUDE_PATH=${C_INCLUDE_PATH}
@@ -48,6 +48,7 @@ export EDITOR
 
 # alias settings
 alias em='env LC_CTYPE=zh_CN.utf8 emacs -nw --debug-init'
+#alias em='env LC_CTYPE=zh_CN.utf8 emacsclient -nw -a "" -s "$HOME/.emacs.d/server/server"'
 alias ipy='ipython'
 
 # set language
@@ -64,14 +65,14 @@ export LC_ALL
 TMPDIR=/tmp
 
 # add module path for python
-if [ -z PYTHONPATH ]; then
-    export PYTHONPATH=${HOME}/local/py_module
+if [ -z "$PYTHONPATH" ]; then
+    export PYTHONPATH=${HOME}/local/lib/python2.7/site-packages/
 else
-    export PYTHONPATH=${HOME}/local/py_module:$PYTHONPATH
+    export PYTHONPATH=${HOME}/local/lib/python2.7/site-packages/:$PYTHONPATH
 fi
 
 # set environment for TIJ4
-TIJ4_SRC_HOME=~/program/java/tij4/TIJ4-code/
+TIJ4_SRC_HOME=~/prog/java/tij4/TIJ4-code/
 CLASSPATH=$CLASSPATH:$TIJ4_SRC_HOME
 
 
@@ -99,3 +100,27 @@ if [ "$(uname -s)" = "Linux" ]; then
    # texlive
    export PATH=$HOME/local/opt/texlive/bin/x86_64-linux:$PATH
 fi
+
+# mac specified stuff
+os_type=$(uname -s)
+if [ "${os_type}" = 'Darwin' ]; then
+    # use coreutils tools instead of the mac default freebsd one
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    # use gnu sed
+    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+    # use gnu tar
+    export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+    if [ -z $MANPATH ]; then
+        export MANPATH="/usr/local/opt/coreutils/libexec/gnuman"
+    else
+        export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+    fi
+    export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+
+    # use homebrew-installed gnu command tools instead of the mac bsd ones
+    export PATH="/usr/local/bin:$PATH"
+fi
+
+### alias
+alias joxa="rlwrap joxa"
+
