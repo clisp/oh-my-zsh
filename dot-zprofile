@@ -5,7 +5,7 @@ eval "$(rbenv init -)"
 
 # load virtualenvwrapper
 virtualenv_wrapper_file="/etc/bash_completion.d/virtualenvwrapper"
-if [ -e ${virtualenvwrapper} ]; then
+if [ -e ${virtualenvwrapper} ] && [ -e "${virtualenv_wrapper_file}" ]; then
   source ${virtualenv_wrapper_file}
 fi
 
