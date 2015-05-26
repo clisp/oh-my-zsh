@@ -124,3 +124,9 @@ fi
 ### alias
 alias joxa="rlwrap joxa"
 
+### elixir
+ELIXIR_HOME="$HOME/local/opt/elixir"
+if [ -d "$ELIXIR_HOME" ]; then
+    export PATH=$ELIXIR_HOME/bin:$PATH
+fi
+
