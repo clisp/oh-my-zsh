@@ -110,11 +110,14 @@ if [ "${os_type}" = 'Darwin' ]; then
     export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
     # use gnu tar
     export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
+    # manpath settings
     if [ -z $MANPATH ]; then
-        export MANPATH="/usr/local/opt/coreutils/libexec/gnuman"
+        export MANPATH="/usr/local/share/man:/usr/share/man"
     else
-        export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+        export MANPATH="/usr/local/share/man:/usr/share/man:$MANPATH"
     fi
+    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
     export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
     # use homebrew-installed gnu command tools instead of the mac bsd ones
