@@ -121,7 +121,7 @@ if [ "${os_type}" = 'Darwin' ]; then
     export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
     # use homebrew-installed gnu command tools instead of the mac bsd ones
-    export PATH="/usr/local/bin:$PATH"
+    export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 fi
 
 ### alias
@@ -133,3 +133,5 @@ if [ -d "$ELIXIR_HOME" ]; then
     export PATH=$ELIXIR_HOME/bin:$PATH
 fi
 
+# add linux manpages
+export MANPATH="$HOME/local/share/man:$MANPATH"
