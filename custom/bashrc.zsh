@@ -135,3 +135,8 @@ fi
 
 # add linux manpages
 export MANPATH="$HOME/local/share/man:$MANPATH"
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+export RUST_SRC_PATH=$HOME/pro/code/rustc-nightly/src
+export CARGO_HOME=$HOME/.cargo
