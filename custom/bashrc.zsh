@@ -136,7 +136,9 @@ fi
 # add linux manpages
 export MANPATH="$HOME/local/share/man:$MANPATH"
 
-# rust
-export PATH="$HOME/.cargo/bin:$PATH"
-export RUST_SRC_PATH=$HOME/pro/code/rustc-nightly/src
-export CARGO_HOME=$HOME/.cargo
+# rocksdb lib
+export LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH=/usr/local/lib
+
+# spacemacs
+alias spacemacs="HOME=~/pro/rep/spacemacs emacs"
