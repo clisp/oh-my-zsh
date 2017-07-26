@@ -136,9 +136,5 @@ fi
 # add linux manpages
 export MANPATH="$HOME/local/share/man:$MANPATH"
 
-# rocksdb lib
-export LIBRARY_PATH=/usr/local/lib
-export LD_LIBRARY_PATH=/usr/local/lib
-
 # spacemacs
 alias spacemacs="HOME=~/pro/rep/spacemacs emacs"
