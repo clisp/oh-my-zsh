@@ -138,3 +138,13 @@ export MANPATH="$HOME/local/share/man:$MANPATH"
 
 # spacemacs
 alias spacemacs="HOME=~/pro/rep/spacemacs emacs"
+
+# rust
+CARGO_HOME=$HOME/.cargo
+if [ -d "$CARGO_HOME" ]; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+RUST_SRC_PATH=$HOME/pro/code/rustc-nightly/src
+if [ -d "$RUST_SRC_PATH" ]; then
+    export RUST_SRC_PATH=$RUST_SRC_PATH
+fi
