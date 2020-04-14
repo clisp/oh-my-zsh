@@ -1,7 +1,10 @@
 
 # load rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+RBENV_HOME="$HOME/.rbenv"
+if [ -d "$RBENV_HOME" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+if
 
 # load virtualenvwrapper
 virtualenv_wrapper_file="/etc/bash_completion.d/virtualenvwrapper"
